@@ -1,6 +1,28 @@
 const generateForm = document.querySelector(".generate-form");
 const imageGallery = document.querySelector(".image-gallery");
 
+const OPENAI_API_KEY = "";
+
+const generateAiImages(userPrompt, userImgQuantity) => {
+  try {
+    const response = await fetch("https://api.openai.com/v1/images/generations", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${OPENAI_API_KEY}`
+      },
+      body: JSON.stringify({
+        prompt: userPrompt,
+        n: userQuantity,
+        size: "512x512",
+        response_format: "b64_json"
+      })
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 const handleFormSubmission = (e) => {
   e.preventDefault();
   
@@ -16,7 +38,8 @@ const handleFormSubmission = (e) => {
     </div>`
   ).join("");
 
-  imageGallery.innerHTML = imgCardMarkup;  
+  imageGallery.innerHTML = imgCardMarkup;
+  generateAiImages(userPrompt, userImgQuantity);
 }
 
 generateForm.addEventListener("submit", handleFormSubmission);
