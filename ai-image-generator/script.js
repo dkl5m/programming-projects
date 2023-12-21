@@ -1,10 +1,17 @@
 const generateForm = document.querySelector(".generate-form");
 const imageGallery = document.querySelector(".image-gallery");
 
-const OPENAI_API_KEY = "";
+const OPENAI_API_KEY = "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";
+
+const updateImageCard = (imgDataArray) => {
+  imgDataArray.forEach((ImgObject, index) => {
+     const imgCard = imageGallery.querySelectorAll(".img-card")[index]; 
+  });
+}
 
 const generateAiImages(userPrompt, userImgQuantity) => {
   try {
+    // send a request to the OpenAI API to generate images based on user inputs
     const response = await fetch("https://api.openai.com/v1/images/generations", {
       method: "POST",
       headers: {
@@ -18,8 +25,13 @@ const generateAiImages(userPrompt, userImgQuantity) => {
         response_format: "b64_json"
       })
     });
+    
+    if(!response.ok) throw new Error("Failed to generate images! Please try again.");
+    
+    const { data } = await response.json(); // Get data from the response
+    updateImageCard([...data]);
   } catch (error) {
-    console.log(error);
+    alert(error.message);
   }
 }
 
