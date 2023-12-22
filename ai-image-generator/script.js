@@ -5,7 +5,20 @@ const OPENAI_API_KEY = "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";
 
 const updateImageCard = (imgDataArray) => {
   imgDataArray.forEach((ImgObject, index) => {
-     const imgCard = imageGallery.querySelectorAll(".img-card")[index]; 
+    const imgCard = imageGallery.querySelectorAll(".img-card")[index]; 
+    const imgElement = imgCard.querySelector("img");
+    const downloadBtn = imgCard.querySelector(".download-btn");
+
+    // Set the image source to the AI-generated image data
+    const aiGeneratedImg = `data:image/jpg;base64,${imgObject.b64_json}`;
+    imgElement.src = aiGeneratedImg;
+
+    // When the image is loaded, remove loading class and set download attributes
+    imgElement.onload = () => {
+      imgCard.classList.remove("loading");
+      downloadBtn.setAttribute("href", aiGeneratedImg);
+      downloadBtn.setAttribute("download", `${new Date().getTime()}.jpg`);
+    }
   });
 }
 
