@@ -8,26 +8,34 @@
   <body>
     <nav>
       <img src="images/logo.png" alt="" class="logo">
-      <ul>
+      <ul id="menu-links">
         <li>Home</li>
         <li>Services</li>
         <li>Projects</li>
         <li>About us</li>
       </ul>
       <button class="nav-btn">Get Started <img src="images/arrow-white.png" alt=""></button>
+      <img src="images/menu.jpg" alt="" class="menu-icon" onclick="toggleMenu()">
     </nav>
     <div class="header">
-      <h1>FREE<br>LANCER</h1>
-      <div class="btn-container">
-        <button class="btn-dark">Request call back <img src="images/phone.png" alt=""> </button>
-        <button class="btn-light">Know more src="images/arrow-black.png" alt=""</button>
-      </div>
-      <p>Designers and programmers read to work in your next project.</p>
+      <div class="header-content">
+        <h1><span>FREE</span><br><span>LANCER</span></h1>
+        <div class="btn-container">
+          <button class="btn-dark">Request call back <img src="images/phone.png" alt=""> </button>
+          <button class="btn-light">Know more src="images/arrow-black.png" alt=""</button>
+        </div>
+        <p>Designers and programmers read to work in your next project.</p>
+      <div/>
       <img src="images/user.png" alt="" class="user-img">
     </div>
     <script>
       let navbar = document.querySelector('nav');
-
+      let menuLinks = document.getElementById("menu-links");
+      
+      function toogleMenu(){
+        menuLinks.classList.toggle('show-menu');
+      }
+    
       window.onscroll = function(){
         if(window.scrollY > 0){
           navbar.style.background = '#eefff9';
