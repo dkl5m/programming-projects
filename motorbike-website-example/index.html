@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <container>
+    <div class="container" id="bike">
       <nav>
         <img src="images/logo.png" class="logo">
         <a href="#" class="btn">Test Drive</a>
@@ -24,8 +24,22 @@
           <div id="black"></div>
         </div>
       </div>
-    </container>
+    </div>
     <script>
+      let redBtn = document.getElementById("red");
+      let blueBtn = document.getElementById("blue");
+      let blackBtn = document.getElementById("black");
+      let bike = document.getElementById("bike");
+
+      redBtn.onclick = function{
+        bike.style.backgroundImage = "url(images/BMW1.png)";
+      }
+      blueBtn.onclick = function{
+        bike.style.backgroundImage = "url(images/BMW2.png";
+      }
+      blackBtn.onclick = function{
+        bike.style.backgroundImage = "url(images/BMW3.png)";
+      }
     </script>
   </body>
 </html>
