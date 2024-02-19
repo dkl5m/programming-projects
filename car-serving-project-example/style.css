@@ -116,3 +116,61 @@ nav {
   color: var(--white);
   cursor: pointer;
 }
+
+.nav__links {
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--secondary-color);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+}
+
+.header__content {
+  max-width: 600px;
+}
+
+.header__content h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+  color: var(--white);
+}
+
+.banner__container {
+  display: grid;
+  grid-auto-rows: minmax(0, 350px);
+}
+
+.banner__card {
+  padding: 5rem 2rem;
+  display: grid;
+  place-content: center;
+}
+
+.banner__card:nth-child(1) {
+  background-color: var(--secondary-color);
+}
+
+.banner__card:nth-child(2) {
+  background-color: var(--secondary-color-dark);
+}
