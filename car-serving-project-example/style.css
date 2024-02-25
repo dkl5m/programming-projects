@@ -174,3 +174,58 @@ nav {
 .banner__card:nth-child(2) {
   background-color: var(--secondary-color-dark);
 }
+.banner__card h4 {
+  max-width: 300px;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.banner__image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.experience__image img {
+  max-width: 500px;
+  margin: auto;
+}
+
+.service {
+  background-color: var(--extra-light);
+}
+
+.service__container {
+  text-align: center;
+}
+
+.service__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 4rem 2rem;
+}
+
+.service__card img {
+  max-width: 150px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-color-dark);
+}
+
+.service__card p {
+  color: var(--text-light);
+}
