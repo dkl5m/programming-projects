@@ -338,3 +338,65 @@ nav {
   margin-top: 1rem;
   min-width: 150px;
 }
+.contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("assets/contact.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.contact__container :is(.section__header, .section__description) {
+  color: var(--white);
+}
+
+.contact__btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact__btns .btn:nth-child(1) {
+  background-color: transparent;
+  border: 2px solid var(--white);
+}
+
+.contact__btns .btn:nth-child(2) {
+  color: var(--primary-color);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.testimonial__container {
+  text-align: center;
+}
+
+.swiper {
+  width: 100%;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.testimonial__card {
+  max-width: 600px;
+  margin: auto;
+}
+
+.testimonial__card img {
+  max-width: 100px;
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial__card p {
+  margin-bottom: 1rem;
+  color: var(--secondary-color-dark);
+}
+
+.testimonial__card h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
