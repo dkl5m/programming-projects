@@ -400,3 +400,99 @@ nav {
   font-weight: 500;
   color: var(--primary-color);
 }
+.footer {
+  background-color: var(--secondary-color-dark);
+}
+
+.subscribe__container {
+  padding-bottom: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.subscribe__content .section__header {
+  color: var(--white);
+}
+
+.subscribe__form form {
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subscribe__form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer__container {
+  display: grid;
+  gap: 4rem 2rem;
+}
+
+.footer__logo {
+  margin-bottom: 2rem;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  padding: 5px 10px;
+  font-size: 1.25rem;
+  color: var(--text-light);
+  background-color: var(--secondary-color);
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.footer__socials a:hover {
+  color: var(--primary-color);
+  background-color: var(--white);
+}
+
+.footer__col h4 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.footer__links li {
+  margin-bottom: 1rem;
+}
+
+.footer__links a {
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.footer__links a:hover {
+  color: var(--white);
+}
+
+.footer__links p {
+  color: var(--text-light);
+}
+
+.footer__links p span {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.footer__bar {
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: var(--white);
+  background-color: var(--secondary-color);
+  text-align: center;
+}
